@@ -22,7 +22,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install opencv-python mediapipe numpy pyinstaller
+          pip install opencv-python mediapipe numpy matplotlib pyinstaller
 
       - name: Install UPX
         run: |
@@ -30,7 +30,7 @@ jobs:
 
       - name: Build EXE
         run: |
-          pyinstaller --onefile --collect-all mediapipe --exclude-module matplotlib --exclude-module pandas --exclude-module scipy --exclude-module tkinter --exclude-module PIL --exclude-module IPython --exclude-module unittest --upx-dir="C:/ProgramData/chocolatey/bin" air_draw.py
+          pyinstaller --onefile --collect-all mediapipe --exclude-module pandas --exclude-module scipy --exclude-module tkinter --exclude-module IPython --exclude-module unittest --upx-dir="C:/ProgramData/chocolatey/bin" air_draw.py
 
       - name: Upload EXE to Release
         uses: softprops/action-gh-release@v2
