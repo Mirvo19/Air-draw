@@ -1,9 +1,8 @@
 name: Build EXE
 
 on:
-  push:
-    tags:
-      - "v*"
+  release:
+    types: [published]
 
 jobs:
   build:
