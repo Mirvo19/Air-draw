@@ -30,7 +30,7 @@ jobs:
 
       - name: Build EXE
         run: |
-          pyinstaller --onefile --collect-all mediapipe --collect-all matplotlib --hidden-import matplotlib --hidden-import matplotlib.pyplot --hidden-import matplotlib.backends.backend_agg --upx-dir="C:/ProgramData/chocolatey/bin" air_draw.py
+          pyinstaller --onefile --collect-all mediapipe --collect-all matplotlib --upx-dir="C:/ProgramData/chocolatey/bin" air_draw.py
 
       - name: Upload EXE to Release
         uses: softprops/action-gh-release@v2
